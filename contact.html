@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- avpthegreat-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SELFLEARNED CALLIGRAPHER</title>
+    <link rel="stylesheet" href="contact.css" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+
+
+    <div class="contact-section">
+      <h1>Contact Us</h1>
+      <div class="border"></div>
+      <form class="contact-form" action="index.html" method="post">
+        <input type="text" class="contact-form-text" placeholder="Your name" />
+        <input
+          type="email"
+          class="contact-form-text"
+          placeholder="Your email"
+        />
+        <input type="text" class="contact-form-text" placeholder="Your phone" />
+        <textarea
+          class="contact-form-text"
+          placeholder="Your message"
+        ></textarea>
+        <input type="submit" class="contact-form-btn" value="Send" />
+      </form>
+    </div>
+
+
+
+
+    <footer>
+      <div class="footer-bottom">
+          <p>copyright &copy;2020 self SelfLearned_Calligrapher. designed by <span> CODE TO INFINITY</span></p>
+      </div>
+  </footer>
+ 
+
+    <!-- java of nav -->
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menu = document.querySelector(".menu-list");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        menu.classList.add("active");
+        menuBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+        body.classList.add("disabledScroll");
+      };
+      cancelBtn.onclick = () => {
+        menu.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        body.classList.remove("disabledScroll");
+      };
+
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+  </body>
+</html>
